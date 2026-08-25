@@ -1,0 +1,72 @@
+name: LuckyMarble
+options:
+  bundleIdPrefix: com.stephen
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0.0
+    DEVELOPMENT_TEAM: ""
+targets:
+  LuckyMarble:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: LuckyMarble
+        excludes:
+          - Resources
+          - Info.plist
+      - path: LuckyMarble/Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.stephen.LuckyMarble
+        PRODUCT_NAME: 幸运弹珠
+        PRODUCT_MODULE_NAME: LuckyMarble
+        TARGETED_DEVICE_FAMILY: "2"
+        SUPPORTS_MACCATALYST: NO
+        ENABLE_USER_SCRIPT_SANDBOXING: YES
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: LuckyMarble/Info.plist
+  LuckyMarbleTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: LuckyMarbleTests
+    dependencies:
+      - target: LuckyMarble
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.stephen.LuckyMarbleTests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/幸运弹珠.app/幸运弹珠"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+  LuckyMarbleUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: LuckyMarbleUITests
+    dependencies:
+      - target: LuckyMarble
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.stephen.LuckyMarbleUITests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  LuckyMarble:
+    build:
+      targets:
+        LuckyMarble: all
+        LuckyMarbleTests: [test]
+        LuckyMarbleUITests: [test]
+    test:
+      targets:
+        - LuckyMarbleTests
+        - LuckyMarbleUITests

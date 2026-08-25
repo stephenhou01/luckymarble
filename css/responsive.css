@@ -1,0 +1,583 @@
+@media (max-width: 500px) {
+  .scoreboard {
+    right: 1%;
+    left: 1%;
+    grid-template-columns: minmax(34px, 1fr) 42px 45px 38px 38px 38px 38px 48px;
+    gap: 2px;
+    min-height: 48px;
+    padding: 7px 6px;
+    border-radius: 14px;
+  }
+
+  .icon-button {
+    width: 38px;
+    min-width: 38px;
+    border-radius: 11px;
+    font-size: 18px;
+  }
+
+  .brand-kicker {
+    font-size: 6px;
+  }
+
+  .brand-block h1 {
+    font-size: 14px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .credit-button {
+    width: 38px;
+    min-width: 38px;
+    border-radius: 11px;
+    font-size: 24px;
+  }
+
+  .credit-menu {
+    right: -42px;
+    width: 120px;
+  }
+
+  .credit-menu::before {
+    right: 55px;
+  }
+
+  .baby-mode-toggle {
+    width: 48px;
+    min-width: 48px;
+    min-height: 38px;
+    padding-inline: 4px;
+    border-radius: 11px;
+  }
+
+  .baby-mode-copy {
+    font-size: 9px;
+  }
+
+  .wallet {
+    min-width: 0;
+    gap: 2px;
+    overflow: hidden;
+  }
+
+  .coin {
+    width: 17px;
+    flex: 0 0 17px;
+  }
+
+  .wallet strong {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .card-wallet {
+    min-width: 0;
+    gap: 2px;
+    overflow: hidden;
+  }
+
+  .card-wallet .game-icon--reward-card {
+    width: 18px;
+    flex-basis: 18px;
+  }
+
+  .card-wallet strong {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .status-row {
+    right: 8%;
+    left: 8%;
+    grid-template-columns: minmax(72px, 20%) minmax(0, 1fr);
+    gap: 5px;
+  }
+
+  .control-deck {
+    min-height: 145px;
+  }
+
+  .stake-inlet {
+    left: 4%;
+  }
+
+  .stake-counter {
+    right: 14%;
+  }
+
+  .playfield-wrap {
+    --reward-lane-width: 21.6%;
+  }
+
+  .phase-banner {
+    left: 56%;
+    max-width: 64%;
+  }
+
+  .reward-bank {
+    min-width: 42px;
+    border-radius: 11px 11px 9px 9px;
+  }
+
+  .reward-bank-meter {
+    right: 2px;
+    bottom: 24px;
+    left: 2px;
+  }
+
+  .wager-control {
+    grid-template-columns: 42px minmax(48px, 1fr) 42px;
+    gap: 4px;
+  }
+
+  .wager-control button {
+    min-width: 42px;
+    min-height: 44px;
+  }
+
+  .wager-control > div {
+    min-height: 54px;
+  }
+
+  .quick-wagers {
+    gap: 3px;
+  }
+
+  .quick-wagers button {
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 650px) and (min-height: 1000px) {
+  .scoreboard {
+    top: calc(4.2% + var(--safe-top) * .25);
+    min-height: 72px;
+    padding: 12px 18px;
+  }
+
+  .status-row {
+    top: calc(11.8% + var(--safe-top) * .18);
+  }
+
+  .multiplier-panel {
+    min-height: 48px;
+  }
+
+  .multiplier-reel span {
+    height: 38px;
+  }
+
+  .playfield-wrap {
+    top: calc(17.2% + var(--safe-top) * .15);
+    bottom: calc(25.6% + var(--safe-bottom) * .1);
+    --reward-lane-width: 19.8%;
+  }
+
+  .control-deck {
+    bottom: calc(3.8% + var(--safe-bottom) * .35);
+    min-height: 190px;
+  }
+
+  .tray-label,
+  .stake-counter {
+    font-size: 12px;
+  }
+
+  .control-row {
+    min-height: 118px;
+  }
+
+  .start-button {
+    max-height: 104px;
+  }
+
+  .launch-button {
+    height: 102px;
+  }
+
+  .power-meter {
+    height: 94px;
+  }
+}
+
+@media (min-width: 700px) and (min-height: 600px) and (max-height: 800px) {
+  .playfield-wrap {
+    bottom: calc(26.2% + var(--safe-bottom) * .08);
+  }
+
+  .control-deck {
+    bottom: calc(1% + var(--safe-bottom) * .2);
+    height: 25%;
+    min-height: 180px;
+  }
+
+  .marble-tray {
+    height: 32%;
+  }
+
+  .control-row {
+    height: 68%;
+    min-height: 112px;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 501px) {
+  .machine {
+    width: min(100vw, 744px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .machine {
+    width: 100vw;
+    height: 100dvh;
+    max-height: none;
+    min-height: 0;
+  }
+
+  .machine-art {
+    background-size: cover;
+    opacity: .72;
+  }
+
+  .playfield-wrap {
+    --reward-lane-width: 21.6%;
+    top: max(5px, var(--safe-top));
+    right: 45.5%;
+    bottom: max(5px, var(--safe-bottom));
+    left: max(5px, var(--safe-top));
+    border-width: 3px;
+    border-radius: 16px;
+  }
+
+  .reward-bank {
+    top: 1.5%;
+    right: .8%;
+    bottom: 1.5%;
+    min-width: 56px;
+  }
+
+  .reward-bank-title {
+    top: 5px;
+    font-size: 7px;
+  }
+
+  .reward-bank-meter {
+    right: 4px;
+    bottom: 25px;
+    left: 4px;
+    padding-block: 2px;
+    font-size: 7px;
+  }
+
+  .reward-bank-meter strong {
+    font-size: 11px;
+  }
+
+  .scoreboard {
+    top: max(6px, var(--safe-top));
+    right: max(4px, var(--safe-bottom));
+    left: 55%;
+    grid-template-columns: minmax(38px, 1fr) minmax(24px, .22fr) minmax(40px, auto) 40px 40px 40px 40px 50px;
+    gap: 2px;
+    min-height: 48px;
+    padding: 5px 7px;
+    border-radius: 13px;
+  }
+
+  .brand-kicker {
+    font-size: 6px;
+  }
+
+  .brand-block h1 {
+    margin-top: 2px;
+    font-size: 14px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .wallet {
+    min-width: 48px;
+  }
+
+  .wallet strong {
+    font-size: 18px;
+  }
+
+  .coin {
+    width: 22px;
+  }
+
+  .icon-button {
+    width: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+  }
+
+  .credit-button {
+    width: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+  }
+
+  .credit-menu {
+    right: -40px;
+    width: 118px;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .credit-menu::before {
+    right: 53px;
+  }
+
+  .credit-menu button {
+    min-height: 34px;
+  }
+
+  .baby-mode-toggle {
+    width: 50px;
+    min-width: 50px;
+    min-height: 40px;
+    padding-inline: 4px;
+    border-radius: 10px;
+  }
+
+  .audio-panel {
+    top: 15%;
+    right: 2%;
+    width: 41%;
+  }
+
+  .status-row {
+    top: 17%;
+    right: 2%;
+    left: 56.5%;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  .multiplier-panel {
+    padding: 3px 5px;
+    border-radius: 9px;
+  }
+
+  .multiplier-label {
+    display: none;
+  }
+
+  .multiplier-reel span {
+    height: 27px;
+    font-size: 14px;
+  }
+
+  .multiplier-reel i {
+    top: 2px;
+    width: 6px;
+  }
+
+  .control-deck {
+    top: 41%;
+    right: 2%;
+    bottom: max(5px, var(--safe-bottom));
+    left: 56.5%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .marble-tray {
+    height: 32%;
+    min-height: 0;
+    border-radius: 12px 12px 18px 18px;
+  }
+
+  .tray-label {
+    top: 3px;
+    left: 7px;
+    font-size: 7px;
+  }
+
+  .stake-counter {
+    right: 13%;
+    bottom: 3px;
+    padding: 1px 5px;
+    font-size: 8px;
+  }
+
+  .stake-inlet {
+    width: 31px;
+    height: 11px;
+  }
+
+  .bank-outlet {
+    width: 38px;
+    height: 14px;
+  }
+
+  .control-row {
+    height: 68%;
+    min-height: 0;
+    grid-template-columns: .72fr 1.85fr .9fr;
+    gap: 6px;
+    padding-top: 5px;
+  }
+
+  .start-button {
+    height: 56px;
+    max-height: 56px;
+    aspect-ratio: auto;
+    border-width: 3px;
+    border-radius: 17px;
+    font-size: 17px;
+  }
+
+  .wager-panel {
+    gap: 3px;
+  }
+
+  .wager-control {
+    grid-template-columns: 36px minmax(42px, 1fr) 36px;
+    gap: 3px;
+  }
+
+  .wager-control button {
+    min-width: 36px;
+    min-height: 38px;
+    border-width: 2px;
+    font-size: 21px;
+  }
+
+  .wager-control > div {
+    min-height: 42px;
+    border-radius: 10px;
+  }
+
+  .wager-control span {
+    font-size: 7px;
+  }
+
+  .wager-control strong {
+    font-size: 20px;
+  }
+
+  .quick-wagers {
+    gap: 3px;
+  }
+
+  .quick-wagers button {
+    min-height: 32px;
+    border-radius: 7px;
+    font-size: 11px;
+  }
+
+  .launcher-control {
+    grid-template-columns: 13px minmax(47px, 1fr);
+    gap: 3px;
+  }
+
+  .power-meter {
+    width: 12px;
+    height: 56px;
+  }
+
+  .launch-button {
+    height: 62px;
+    border-radius: 20px 20px 13px 13px;
+    font-size: 7px;
+  }
+
+  .plunger-knob {
+    top: 5px;
+    width: 34px;
+  }
+
+  .phase-banner {
+    top: 3%;
+    left: 52%;
+    max-width: 52%;
+    padding: 3px 7px;
+    font-size: 9px;
+  }
+
+  .result-card {
+    top: 14%;
+    left: 40%;
+    width: 68%;
+    gap: 5px;
+    padding: 5px 8px 5px 5px;
+    border-width: 2px;
+    border-radius: 14px;
+  }
+
+  .win-celebration {
+    top: 9%;
+    right: calc(var(--reward-lane-width) + 2%);
+    left: 2%;
+    min-height: 45%;
+  }
+
+  .win-celebration::before {
+    inset: 6% 2%;
+    border-width: 2px;
+    border-radius: 20px;
+  }
+
+  .win-celebration-stage {
+    width: 90%;
+    grid-template-columns: minmax(54px, 29%) 1fr;
+    gap: 6px;
+  }
+
+  .win-celebration-stage img {
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgb(138 43 175 / 72%), 0 0 15px #ffc62f;
+  }
+
+  .win-celebration-copy strong {
+    font-size: clamp(17px, 5.8vw, 27px);
+  }
+
+  .win-confetti {
+    width: 42px;
+  }
+
+  .result-card img {
+    width: 48px;
+  }
+
+  .result-card strong {
+    font-size: 18px;
+  }
+
+  .result-card span {
+    font-size: 10px;
+  }
+
+  .card-dispenser {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .card-showcase {
+    top: 14%;
+    right: calc(var(--reward-lane-width) + 3%);
+    bottom: 5%;
+    left: 3%;
+    gap: 5px;
+    padding: 2%;
+  }
+
+  .reward-card {
+    width: min(100%, 70px);
+  }
+
+  .bank-transfer-chute {
+    display: none;
+  }
+
+  .game-over-card {
+    width: min(48%, 380px);
+    padding: 17px;
+  }
+}

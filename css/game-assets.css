@@ -1,0 +1,253 @@
+:root {
+  --arcade-icon-sheet: url("../assets/arcade-icons-v2.png");
+}
+
+.game-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  aspect-ratio: 1;
+  background-image: var(--arcade-icon-sheet);
+  background-repeat: no-repeat;
+  background-size: 500% 500%;
+  pointer-events: none;
+}
+
+.game-icon--coin { background-position: 0 0; }
+.game-icon--sound { background-position: 25% 0; }
+.game-icon--reset { background-position: 50% 0; }
+.game-icon--gem { background-position: 75% 0; }
+.game-icon--reward-card { background-position: 100% 0; }
+.game-icon--star { background-position: 0 25%; }
+.game-icon--crown { background-position: 25% 25%; }
+.game-icon--trophy { background-position: 50% 25%; }
+.game-icon--clover { background-position: 75% 25%; }
+.game-icon--bell { background-position: 100% 25%; }
+.game-icon--sunburst { background-position: 0 50%; }
+.game-icon--marble { background-position: 25% 50%; }
+.game-icon--target { background-position: 50% 50%; }
+.game-icon--horseshoe { background-position: 75% 50%; }
+.game-icon--bumper { background-position: 100% 50%; }
+.game-icon--sparkles { background-position: 0 75%; }
+.game-icon--lightning { background-position: 25% 75%; }
+.game-icon--confetti { background-position: 50% 75%; }
+.game-icon--near-miss { background-position: 75% 75%; }
+.game-icon--bow { background-position: 100% 75%; }
+.game-icon--bulb { background-position: 0 100%; }
+.game-icon--screw { background-position: 25% 100%; }
+.game-icon--ticket { background-position: 50% 100%; }
+.game-icon--plunger { background-position: 75% 100%; }
+.game-icon--laurel { background-position: 100% 100%; }
+
+.scoreboard::before {
+  position: absolute;
+  top: -13px;
+  left: -14px;
+  width: 30px;
+  content: "";
+  aspect-ratio: 1;
+  background: var(--arcade-icon-sheet) 75% 0 / 500% 500% no-repeat;
+  filter: drop-shadow(0 3px 3px rgb(39 3 61 / 42%));
+  pointer-events: none;
+}
+
+.wallet .coin {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 2px 1px rgb(85 35 0 / 45%));
+}
+
+.button-icon {
+  width: 29px;
+  filter: drop-shadow(0 2px 1px rgb(48 3 70 / 45%));
+}
+
+.multiplier-icon {
+  width: 23px;
+  margin: -3px -3px -3px -2px;
+  filter: drop-shadow(0 1px 1px rgb(32 4 24 / 55%));
+}
+
+.result-visual {
+  position: relative;
+  display: grid;
+  width: clamp(54px, 15vw, 92px);
+  flex: 0 0 auto;
+  place-items: center;
+  aspect-ratio: 1;
+}
+
+.result-card .result-visual img {
+  width: 100%;
+}
+
+.result-status-icon {
+  position: absolute;
+  top: -9%;
+  right: -13%;
+  width: 42%;
+  background-position: 100% 100%;
+  filter: drop-shadow(0 2px 2px rgb(75 20 0 / 42%));
+}
+
+.result-card.is-loss .result-status-icon {
+  position: static;
+  width: 96%;
+  background-position: 75% 75%;
+  filter: drop-shadow(0 3px 3px rgb(68 10 16 / 45%));
+}
+
+.result-card::after {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  width: 64px;
+  content: "";
+  aspect-ratio: 1;
+  background: var(--arcade-icon-sheet) 100% 75% / 500% 500% no-repeat;
+  filter: drop-shadow(0 3px 3px rgb(68 8 84 / 34%));
+  pointer-events: none;
+}
+
+.result-card.is-loss::after {
+  display: none;
+}
+
+.start-button {
+  position: relative;
+}
+
+.start-button::before {
+  position: absolute;
+  top: -7%;
+  right: -7%;
+  width: 40%;
+  content: "";
+  aspect-ratio: 1;
+  background: var(--arcade-icon-sheet) 0 75% / 500% 500% no-repeat;
+  filter: drop-shadow(0 2px 2px rgb(39 58 0 / 35%));
+  pointer-events: none;
+}
+
+.game-over-icon {
+  width: 82px;
+  margin-top: -8px;
+  margin-bottom: -6px;
+  filter: drop-shadow(0 7px 8px rgb(40 2 52 / 35%));
+}
+
+.machine-hardware {
+  position: absolute;
+  z-index: 9;
+  inset: 0;
+  pointer-events: none;
+}
+
+.machine-hardware .game-icon,
+.multiplier-ornament,
+.card-slot-ticket,
+.launcher-ornament {
+  position: absolute;
+  filter: drop-shadow(0 2px 2px rgb(74 25 0 / 38%));
+  pointer-events: none;
+}
+
+.machine-hardware-bulb {
+  top: 13.2%;
+  width: clamp(22px, 4.4vw, 34px);
+}
+
+.machine-hardware-bulb--left { left: 7.3%; }
+.machine-hardware-bulb--right { right: 7.3%; }
+
+.machine-hardware-screw {
+  width: clamp(12px, 2.4vw, 18px);
+  opacity: .92;
+}
+
+.machine-hardware-screw--top-left { top: 17.1%; left: 9.2%; }
+.machine-hardware-screw--top-right { top: 17.1%; right: 9.7%; }
+.machine-hardware-screw--bottom-left { bottom: 24.8%; left: 9.2%; }
+.machine-hardware-screw--bottom-right { right: 9.7%; bottom: 24.8%; }
+
+.multiplier-ornament {
+  z-index: 2;
+  top: -14px;
+  right: -14px;
+  width: 33px;
+  rotate: 8deg;
+}
+
+.card-slot-ticket {
+  z-index: 2;
+  top: -16px;
+  right: -14px;
+  width: clamp(28px, 5.5vw, 42px);
+  rotate: 7deg;
+}
+
+.launcher-ornament {
+  z-index: 2;
+  top: -12%;
+  right: -12%;
+  width: 46%;
+  rotate: 9deg;
+}
+
+@media (max-width: 500px) {
+  .machine-hardware,
+  .multiplier-ornament,
+  .card-slot-ticket,
+  .launcher-ornament {
+    display: none;
+  }
+
+  .scoreboard::before {
+    top: -9px;
+    left: -10px;
+    width: 23px;
+  }
+
+  .button-icon {
+    width: 27px;
+  }
+
+  .multiplier-icon {
+    width: 19px;
+  }
+
+  .result-card::after {
+    top: -14px;
+    right: -10px;
+    width: 48px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .machine-hardware,
+  .multiplier-ornament,
+  .card-slot-ticket,
+  .launcher-ornament {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scoreboard::before,
+  .start-button::before {
+    animation: arcade-icon-float 2.4s ease-in-out infinite alternate;
+  }
+
+  .result-card::after {
+    animation: arcade-confetti-pop 520ms cubic-bezier(.2, 1.35, .4, 1) both;
+  }
+}
+
+@keyframes arcade-icon-float {
+  to { transform: translateY(-3px) rotate(3deg); }
+}
+
+@keyframes arcade-confetti-pop {
+  from { opacity: 0; transform: scale(.45) rotate(-14deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}

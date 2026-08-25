@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13CD01157EAB6D558A551C5E /* theme-cosmic.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA77F99AE5D27E9577C25D6 /* theme-cosmic.png */; };
+		1E21A2BC3C5D62AEDD28CB3F /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11500A0079BB2B88D143F7 /* AppModel.swift */; };
+		2531B9E2606F104DC8CB4499 /* ArcadeMarbleVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479BE3EBAF7171B7AC0FA5 /* ArcadeMarbleVisual.swift */; };
+		256043BCA6F81FBD5673CA9F /* win-music-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B124D64568E9784E30744670 /* win-music-2.mp3 */; };
+		26698E5CE1B9E9CF5D232BE8 /* win-music-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38238BD414FBA4DF43BA91B8 /* win-music-3.mp3 */; };
+		2A9B4CCEF777814341FE6632 /* mascot-win-v2.webp in Resources */ = {isa = PBXBuildFile; fileRef = C23ED558E093CF1E92BF36CA /* mascot-win-v2.webp */; };
+		4228C387346645194E747048 /* AudioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6ED035AFDD130AE11C175A /* AudioCoordinator.swift */; };
+		5E5CA65B02A099F15A928A3B /* ThemePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85443EE82BEE4EB592CAE75 /* ThemePack.swift */; };
+		60DF151F5BE03F36C838D2B7 /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B621234F7FB7A194733E63B9 /* background-music.mp3 */; };
+		61B5C959781BAA3805DA015B /* LauncherLeverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722DAF9551805979396D3FD /* LauncherLeverView.swift */; };
+		6BC4CABDDFC07FC4ECC3B205 /* PersistenceAndCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D4C3DE1CE8B0BA5D8C507 /* PersistenceAndCatalogTests.swift */; };
+		7057D541AC5E3E1B4696522C /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACA2C5B679CD49A15C2934 /* PersistenceStore.swift */; };
+		75161D4EBC6AABE6193DB92E /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D65B8D7F31C54771BC267 /* SettingsStore.swift */; };
+		77E1559EBDB15F0590AF8610 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6341B857740A8DAA98CC0F /* SettingsView.swift */; };
+		7BC7F518926CB8B7AB3A0483 /* FixedPhysicsWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780C8EDE273A66ECF2CD5C /* FixedPhysicsWorld.swift */; };
+		898B301B8248D0BCE5BEE56A /* background-music-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C315578E55916F7923D75108 /* background-music-4.mp3 */; };
+		89EB82486762A95E48A5FFEF /* PhysicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030CA53830FDD74B05EDA77 /* PhysicsTests.swift */; };
+		8D1918941F434CB6921BABB9 /* LuckyMarbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B8E9B5B68E3C080A9882A /* LuckyMarbleApp.swift */; };
+		925B953955ED43AFBCF1376A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE0E4FC8DCA209B5B6C33E /* ContentView.swift */; };
+		9A4DCDBEDFD57A11066A0E24 /* theme-candy-thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 229ED643B9882426EAA35A9E /* theme-candy-thumb.png */; };
+		9CB24F522C5585A91302A613 /* GameRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22409569B895214FEF610401 /* GameRulesTests.swift */; };
+		9D216CDAC9AD0309320F344C /* theme-ocean-thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA6EBBF448BBFA8D21DF291 /* theme-ocean-thumb.png */; };
+		A3316D31EFCAB8BFEEEB680D /* theme-candy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0066929D3056B8F6B993958C /* theme-candy.png */; };
+		A64EF46BDF4EB672096FF090 /* QuickSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526DB9A5E73BF28934F636F /* QuickSettingsViews.swift */; };
+		A6A0A8D76EB2A3B084393C66 /* background-music-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3200A417228CB383F5437BD8 /* background-music-2.mp3 */; };
+		A6DD23157D00BC713563956C /* win-music-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD05CF14600AF7888B05206D /* win-music-4.mp3 */; };
+		AED938F3EF4BA46C9A42F392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1919AD081FE843C2CFECFEB4 /* Assets.xcassets */; };
+		AEE929E39F7B6C9FC57346CD /* RewardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202A5F1EA3F53BEA07E68F8 /* RewardViews.swift */; };
+		C31094662B58D522D0A48E36 /* GameGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100C5584CF9F2BAC2233207 /* GameGeometry.swift */; };
+		CF304761CD4D0BEDD3DA9272 /* background-music-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38265639BFFED0C83F57DFFE /* background-music-3.mp3 */; };
+		D14E1134B2046046F08653A8 /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC67397D9C0114A200C110 /* GameModels.swift */; };
+		D20C8A6B72F1E496D7C4055A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9142BB5A47D594E523CB56 /* GameEngine.swift */; };
+		DB7526375223879081B4A35D /* LuckyMarbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E737CB75F6C561D564EDF /* LuckyMarbleUITests.swift */; };
+		EC1E8AAA0DC121554E6DB077 /* theme-classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 052BCF8A08BCCA0DDE648A7B /* theme-classic.png */; };
+		ED2CE0F8B77BFF4F15EDEF5B /* theme-ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3F0D2F7FA225E38FBCF283 /* theme-ocean.png */; };
+		F17BC0D0D675C7FDC8CCF8CC /* win-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C466188DC6F8F50D665EA3FA /* win-music.mp3 */; };
+		F1B280BF3BB4B54AE04812BB /* MarbleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1654AA24CB1B358E0C1BE6 /* MarbleScene.swift */; };
+		F7D2822D0B8F38F43A5571D1 /* theme-classic-thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDD7EC575AFCC8B08C23608 /* theme-classic-thumb.png */; };
+		FC8B598D9A8DFE77A2347451 /* theme-cosmic-thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ABC86F31F4AEE0552357A4 /* theme-cosmic-thumb.png */; };
+		FD441752B8A939A8D638D67B /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004A11AAF24F4A37D72EF56 /* GameRules.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60FECAECE462850E6D8B84D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B0B416265FB6005298909E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D13ECFC7D70FF0ED62CDC19E;
+			remoteInfo = LuckyMarble;
+		};
+		68766DD332982B24FF849189 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B0B416265FB6005298909E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D13ECFC7D70FF0ED62CDC19E;
+			remoteInfo = LuckyMarble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0004A11AAF24F4A37D72EF56 /* GameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
+		0066929D3056B8F6B993958C /* theme-candy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-candy.png"; sourceTree = "<group>"; };
+		052BCF8A08BCCA0DDE648A7B /* theme-classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-classic.png"; sourceTree = "<group>"; };
+		1919AD081FE843C2CFECFEB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22409569B895214FEF610401 /* GameRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesTests.swift; sourceTree = "<group>"; };
+		229ED643B9882426EAA35A9E /* theme-candy-thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-candy-thumb.png"; sourceTree = "<group>"; };
+		244A4F5301001827993EF8A7 /* LuckyMarbleUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LuckyMarbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D6ED035AFDD130AE11C175A /* AudioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCoordinator.swift; sourceTree = "<group>"; };
+		2F4D4C3DE1CE8B0BA5D8C507 /* PersistenceAndCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceAndCatalogTests.swift; sourceTree = "<group>"; };
+		3030CA53830FDD74B05EDA77 /* PhysicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTests.swift; sourceTree = "<group>"; };
+		3200A417228CB383F5437BD8 /* background-music-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music-2.mp3"; sourceTree = "<group>"; };
+		38238BD414FBA4DF43BA91B8 /* win-music-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "win-music-3.mp3"; sourceTree = "<group>"; };
+		38265639BFFED0C83F57DFFE /* background-music-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music-3.mp3"; sourceTree = "<group>"; };
+		5100C5584CF9F2BAC2233207 /* GameGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGeometry.swift; sourceTree = "<group>"; };
+		59479BE3EBAF7171B7AC0FA5 /* ArcadeMarbleVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeMarbleVisual.swift; sourceTree = "<group>"; };
+		68780C8EDE273A66ECF2CD5C /* FixedPhysicsWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedPhysicsWorld.swift; sourceTree = "<group>"; };
+		6DBE0E4FC8DCA209B5B6C33E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AA48042C3332290E54936B2 /* 幸运弹珠.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "幸运弹珠.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6341B857740A8DAA98CC0F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		888E737CB75F6C561D564EDF /* LuckyMarbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyMarbleUITests.swift; sourceTree = "<group>"; };
+		88ABC86F31F4AEE0552357A4 /* theme-cosmic-thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-cosmic-thumb.png"; sourceTree = "<group>"; };
+		AAA77F99AE5D27E9577C25D6 /* theme-cosmic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-cosmic.png"; sourceTree = "<group>"; };
+		AD05CF14600AF7888B05206D /* win-music-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "win-music-4.mp3"; sourceTree = "<group>"; };
+		B124D64568E9784E30744670 /* win-music-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "win-music-2.mp3"; sourceTree = "<group>"; };
+		B621234F7FB7A194733E63B9 /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		B85443EE82BEE4EB592CAE75 /* ThemePack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePack.swift; sourceTree = "<group>"; };
+		C202A5F1EA3F53BEA07E68F8 /* RewardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViews.swift; sourceTree = "<group>"; };
+		C23ED558E093CF1E92BF36CA /* mascot-win-v2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mascot-win-v2.webp"; sourceTree = "<group>"; };
+		C315578E55916F7923D75108 /* background-music-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music-4.mp3"; sourceTree = "<group>"; };
+		C466188DC6F8F50D665EA3FA /* win-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "win-music.mp3"; sourceTree = "<group>"; };
+		C722DAF9551805979396D3FD /* LauncherLeverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherLeverView.swift; sourceTree = "<group>"; };
+		C98D65B8D7F31C54771BC267 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		CDACA2C5B679CD49A15C2934 /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
+		D526DB9A5E73BF28934F636F /* QuickSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSettingsViews.swift; sourceTree = "<group>"; };
+		DB11500A0079BB2B88D143F7 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		DB42A76FC301F662569C6D87 /* LuckyMarbleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LuckyMarbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9142BB5A47D594E523CB56 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		E25B8E9B5B68E3C080A9882A /* LuckyMarbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyMarbleApp.swift; sourceTree = "<group>"; };
+		E4DC67397D9C0114A200C110 /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
+		ECDD7EC575AFCC8B08C23608 /* theme-classic-thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-classic-thumb.png"; sourceTree = "<group>"; };
+		FD3F0D2F7FA225E38FBCF283 /* theme-ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-ocean.png"; sourceTree = "<group>"; };
+		FF1654AA24CB1B358E0C1BE6 /* MarbleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleScene.swift; sourceTree = "<group>"; };
+		FFA6EBBF448BBFA8D21DF291 /* theme-ocean-thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-ocean-thumb.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0233745AF3B159D9A6375CC3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				68780C8EDE273A66ECF2CD5C /* FixedPhysicsWorld.swift */,
+				DD9142BB5A47D594E523CB56 /* GameEngine.swift */,
+				5100C5584CF9F2BAC2233207 /* GameGeometry.swift */,
+				E4DC67397D9C0114A200C110 /* GameModels.swift */,
+				0004A11AAF24F4A37D72EF56 /* GameRules.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0486064763AF219B85B1F7E3 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				FF1654AA24CB1B358E0C1BE6 /* MarbleScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		075507A4182924459456438F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CDACA2C5B679CD49A15C2934 /* PersistenceStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		23B7B0EC499729AF228D79BD /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				C23ED558E093CF1E92BF36CA /* mascot-win-v2.webp */,
+				229ED643B9882426EAA35A9E /* theme-candy-thumb.png */,
+				0066929D3056B8F6B993958C /* theme-candy.png */,
+				ECDD7EC575AFCC8B08C23608 /* theme-classic-thumb.png */,
+				052BCF8A08BCCA0DDE648A7B /* theme-classic.png */,
+				88ABC86F31F4AEE0552357A4 /* theme-cosmic-thumb.png */,
+				AAA77F99AE5D27E9577C25D6 /* theme-cosmic.png */,
+				FFA6EBBF448BBFA8D21DF291 /* theme-ocean-thumb.png */,
+				FD3F0D2F7FA225E38FBCF283 /* theme-ocean.png */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		84298AB9BFC9DBE37903B849 /* LuckyMarble */ = {
+			isa = PBXGroup;
+			children = (
+				9A1455DBAC9A4F2839D6E215 /* App */,
+				FE98149F045457759EFE3560 /* Audio */,
+				0233745AF3B159D9A6375CC3 /* Core */,
+				075507A4182924459456438F /* Persistence */,
+				C9D057D7AF461F7696254D55 /* Resources */,
+				0486064763AF219B85B1F7E3 /* Scene */,
+				A7527EB196F4128EFD99940D /* Settings */,
+				D27F61D1D2F1FFB346B323B2 /* Theme */,
+				DD5964F94884F3725FBBAE2D /* UI */,
+			);
+			path = LuckyMarble;
+			sourceTree = "<group>";
+		};
+		9A1455DBAC9A4F2839D6E215 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB11500A0079BB2B88D143F7 /* AppModel.swift */,
+				6DBE0E4FC8DCA209B5B6C33E /* ContentView.swift */,
+				E25B8E9B5B68E3C080A9882A /* LuckyMarbleApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A7527EB196F4128EFD99940D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C98D65B8D7F31C54771BC267 /* SettingsStore.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ABE633281A352AAA160974F8 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				3200A417228CB383F5437BD8 /* background-music-2.mp3 */,
+				38265639BFFED0C83F57DFFE /* background-music-3.mp3 */,
+				C315578E55916F7923D75108 /* background-music-4.mp3 */,
+				B621234F7FB7A194733E63B9 /* background-music.mp3 */,
+				B124D64568E9784E30744670 /* win-music-2.mp3 */,
+				38238BD414FBA4DF43BA91B8 /* win-music-3.mp3 */,
+				AD05CF14600AF7888B05206D /* win-music-4.mp3 */,
+				C466188DC6F8F50D665EA3FA /* win-music.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		B5A5482500B4B1FEDBA6559C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AA48042C3332290E54936B2 /* 幸运弹珠.app */,
+				DB42A76FC301F662569C6D87 /* LuckyMarbleTests.xctest */,
+				244A4F5301001827993EF8A7 /* LuckyMarbleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9D057D7AF461F7696254D55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1919AD081FE843C2CFECFEB4 /* Assets.xcassets */,
+				ABE633281A352AAA160974F8 /* Audio */,
+				23B7B0EC499729AF228D79BD /* Themes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1EF20ADDBA077243CBFF484 /* LuckyMarbleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				888E737CB75F6C561D564EDF /* LuckyMarbleUITests.swift */,
+			);
+			path = LuckyMarbleUITests;
+			sourceTree = "<group>";
+		};
+		D27F61D1D2F1FFB346B323B2 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B85443EE82BEE4EB592CAE75 /* ThemePack.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		DD5964F94884F3725FBBAE2D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				59479BE3EBAF7171B7AC0FA5 /* ArcadeMarbleVisual.swift */,
+				C722DAF9551805979396D3FD /* LauncherLeverView.swift */,
+				D526DB9A5E73BF28934F636F /* QuickSettingsViews.swift */,
+				C202A5F1EA3F53BEA07E68F8 /* RewardViews.swift */,
+				7F6341B857740A8DAA98CC0F /* SettingsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E2A4DA60B1281E6C6A6FA17B /* LuckyMarbleTests */ = {
+			isa = PBXGroup;
+			children = (
+				22409569B895214FEF610401 /* GameRulesTests.swift */,
+				2F4D4C3DE1CE8B0BA5D8C507 /* PersistenceAndCatalogTests.swift */,
+				3030CA53830FDD74B05EDA77 /* PhysicsTests.swift */,
+			);
+			path = LuckyMarbleTests;
+			sourceTree = "<group>";
+		};
+		F3628B996219AF87AF3B2FAD = {
+			isa = PBXGroup;
+			children = (
+				84298AB9BFC9DBE37903B849 /* LuckyMarble */,
+				E2A4DA60B1281E6C6A6FA17B /* LuckyMarbleTests */,
+				D1EF20ADDBA077243CBFF484 /* LuckyMarbleUITests */,
+				B5A5482500B4B1FEDBA6559C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE98149F045457759EFE3560 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				2D6ED035AFDD130AE11C175A /* AudioCoordinator.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FB49A996C8170C57BCE0F7A /* LuckyMarbleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABC72B69646D2961946329C /* Build configuration list for PBXNativeTarget "LuckyMarbleUITests" */;
+			buildPhases = (
+				236D621C7DB4B688509A4B65 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CE98EF822AA83DE235DA7BC /* PBXTargetDependency */,
+			);
+			name = LuckyMarbleUITests;
+			packageProductDependencies = (
+			);
+			productName = LuckyMarbleUITests;
+			productReference = 244A4F5301001827993EF8A7 /* LuckyMarbleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		341ECA111C29BB605A014915 /* LuckyMarbleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075DE83D269BDDD8B83C129A /* Build configuration list for PBXNativeTarget "LuckyMarbleTests" */;
+			buildPhases = (
+				F2929D5477554A65C51F524D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D38E75E6CFC466B25F73ED6A /* PBXTargetDependency */,
+			);
+			name = LuckyMarbleTests;
+			packageProductDependencies = (
+			);
+			productName = LuckyMarbleTests;
+			productReference = DB42A76FC301F662569C6D87 /* LuckyMarbleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D13ECFC7D70FF0ED62CDC19E /* LuckyMarble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7171CB7E984CBA05A3192268 /* Build configuration list for PBXNativeTarget "LuckyMarble" */;
+			buildPhases = (
+				BFDD05C2B22A43716A776988 /* Sources */,
+				F7F8BAE3DE080A6FBC7F5A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuckyMarble;
+			packageProductDependencies = (
+			);
+			productName = LuckyMarble;
+			productReference = 7AA48042C3332290E54936B2 /* 幸运弹珠.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03B0B416265FB6005298909E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0FB49A996C8170C57BCE0F7A = {
+						DevelopmentTeam = "";
+						TestTargetID = D13ECFC7D70FF0ED62CDC19E;
+					};
+					341ECA111C29BB605A014915 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 49096DCB72E8EC975859C4FD /* Build configuration list for PBXProject "LuckyMarble" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F3628B996219AF87AF3B2FAD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B5A5482500B4B1FEDBA6559C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D13ECFC7D70FF0ED62CDC19E /* LuckyMarble */,
+				341ECA111C29BB605A014915 /* LuckyMarbleTests */,
+				0FB49A996C8170C57BCE0F7A /* LuckyMarbleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7F8BAE3DE080A6FBC7F5A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED938F3EF4BA46C9A42F392 /* Assets.xcassets in Resources */,
+				A6A0A8D76EB2A3B084393C66 /* background-music-2.mp3 in Resources */,
+				CF304761CD4D0BEDD3DA9272 /* background-music-3.mp3 in Resources */,
+				898B301B8248D0BCE5BEE56A /* background-music-4.mp3 in Resources */,
+				60DF151F5BE03F36C838D2B7 /* background-music.mp3 in Resources */,
+				2A9B4CCEF777814341FE6632 /* mascot-win-v2.webp in Resources */,
+				9A4DCDBEDFD57A11066A0E24 /* theme-candy-thumb.png in Resources */,
+				A3316D31EFCAB8BFEEEB680D /* theme-candy.png in Resources */,
+				F7D2822D0B8F38F43A5571D1 /* theme-classic-thumb.png in Resources */,
+				EC1E8AAA0DC121554E6DB077 /* theme-classic.png in Resources */,
+				FC8B598D9A8DFE77A2347451 /* theme-cosmic-thumb.png in Resources */,
+				13CD01157EAB6D558A551C5E /* theme-cosmic.png in Resources */,
+				9D216CDAC9AD0309320F344C /* theme-ocean-thumb.png in Resources */,
+				ED2CE0F8B77BFF4F15EDEF5B /* theme-ocean.png in Resources */,
+				256043BCA6F81FBD5673CA9F /* win-music-2.mp3 in Resources */,
+				26698E5CE1B9E9CF5D232BE8 /* win-music-3.mp3 in Resources */,
+				A6DD23157D00BC713563956C /* win-music-4.mp3 in Resources */,
+				F17BC0D0D675C7FDC8CCF8CC /* win-music.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		236D621C7DB4B688509A4B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7526375223879081B4A35D /* LuckyMarbleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFDD05C2B22A43716A776988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E21A2BC3C5D62AEDD28CB3F /* AppModel.swift in Sources */,
+				2531B9E2606F104DC8CB4499 /* ArcadeMarbleVisual.swift in Sources */,
+				4228C387346645194E747048 /* AudioCoordinator.swift in Sources */,
+				925B953955ED43AFBCF1376A /* ContentView.swift in Sources */,
+				7BC7F518926CB8B7AB3A0483 /* FixedPhysicsWorld.swift in Sources */,
+				D20C8A6B72F1E496D7C4055A /* GameEngine.swift in Sources */,
+				C31094662B58D522D0A48E36 /* GameGeometry.swift in Sources */,
+				D14E1134B2046046F08653A8 /* GameModels.swift in Sources */,
+				FD441752B8A939A8D638D67B /* GameRules.swift in Sources */,
+				61B5C959781BAA3805DA015B /* LauncherLeverView.swift in Sources */,
+				8D1918941F434CB6921BABB9 /* LuckyMarbleApp.swift in Sources */,
+				F1B280BF3BB4B54AE04812BB /* MarbleScene.swift in Sources */,
+				7057D541AC5E3E1B4696522C /* PersistenceStore.swift in Sources */,
+				A64EF46BDF4EB672096FF090 /* QuickSettingsViews.swift in Sources */,
+				AEE929E39F7B6C9FC57346CD /* RewardViews.swift in Sources */,
+				75161D4EBC6AABE6193DB92E /* SettingsStore.swift in Sources */,
+				77E1559EBDB15F0590AF8610 /* SettingsView.swift in Sources */,
+				5E5CA65B02A099F15A928A3B /* ThemePack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2929D5477554A65C51F524D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB24F522C5585A91302A613 /* GameRulesTests.swift in Sources */,
+				6BC4CABDDFC07FC4ECC3B205 /* PersistenceAndCatalogTests.swift in Sources */,
+				89EB82486762A95E48A5FFEF /* PhysicsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CE98EF822AA83DE235DA7BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D13ECFC7D70FF0ED62CDC19E /* LuckyMarble */;
+			targetProxy = 68766DD332982B24FF849189 /* PBXContainerItemProxy */;
+		};
+		D38E75E6CFC466B25F73ED6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D13ECFC7D70FF0ED62CDC19E /* LuckyMarble */;
+			targetProxy = 60FECAECE462850E6D8B84D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		016CB3BB7D4BCDD9A57B2544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		0D6F36997B4D39E153C119F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarbleTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/幸运弹珠.app/幸运弹珠";
+			};
+			name = Debug;
+		};
+		197A87BDBCD8E5EA6ABB8656 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6WLUSLD79F;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LuckyMarble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarble;
+				PRODUCT_MODULE_NAME = LuckyMarble;
+				PRODUCT_NAME = "幸运弹珠";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "LuckyMarble App Store";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		25B615FADB5D1B6EC167BF8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarbleUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuckyMarble;
+			};
+			name = Release;
+		};
+		4B875479E300F61D17D47AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		934D3BDA7DF3A5FA4FC6376D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarbleTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/幸运弹珠.app/幸运弹珠";
+			};
+			name = Release;
+		};
+		C116FD78C720D293F562AB04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LuckyMarble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarble;
+				PRODUCT_MODULE_NAME = LuckyMarble;
+				PRODUCT_NAME = "幸运弹珠";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FD348CB5021C6AE363B4A46E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephen.LuckyMarbleUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuckyMarble;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		075DE83D269BDDD8B83C129A /* Build configuration list for PBXNativeTarget "LuckyMarbleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6F36997B4D39E153C119F4 /* Debug */,
+				934D3BDA7DF3A5FA4FC6376D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		49096DCB72E8EC975859C4FD /* Build configuration list for PBXProject "LuckyMarble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016CB3BB7D4BCDD9A57B2544 /* Debug */,
+				4B875479E300F61D17D47AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7171CB7E984CBA05A3192268 /* Build configuration list for PBXNativeTarget "LuckyMarble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C116FD78C720D293F562AB04 /* Debug */,
+				197A87BDBCD8E5EA6ABB8656 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AABC72B69646D2961946329C /* Build configuration list for PBXNativeTarget "LuckyMarbleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD348CB5021C6AE363B4A46E /* Debug */,
+				25B615FADB5D1B6EC167BF8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03B0B416265FB6005298909E /* Project object */;
+}

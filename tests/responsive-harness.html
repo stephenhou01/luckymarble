@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>幸运弹珠响应式验收</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 24px; color: #fff; background: #180424; font: 14px/1.4 ui-monospace, monospace; }
+      h1 { margin: 0 0 12px; font-size: 16px; }
+      iframe { display: block; border: 2px solid #ffd85d; background: #5b2382; box-shadow: 0 8px 24px #0008; }
+    </style>
+  </head>
+  <body>
+    <h1 id="label">响应式验收</h1>
+    <iframe id="preview" src="../index.html" title="幸运弹珠响应式预览"></iframe>
+    <script>
+      const query = new URLSearchParams(location.search);
+      const width = Math.max(320, Math.min(1280, Number(query.get("width")) || 390));
+      const height = Math.max(320, Math.min(1180, Number(query.get("height")) || 844));
+      const preview = document.getElementById("preview");
+      preview.style.width = `${width}px`;
+      preview.style.height = `${height}px`;
+      document.getElementById("label").textContent = `${width} × ${height}`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中奖弹珠仓测试</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <style>
+      body { margin: 0; padding: 24px; color: #f8efff; background: #24093b; font: 15px/1.6 ui-monospace, monospace; }
+      h1 { color: #ffe268; }
+      .pass { color: #84f59a; }
+      .fail { color: #ff8a86; }
+      pre { padding: 16px; overflow: auto; border-radius: 12px; background: #12031f; }
+      #fixture { position: relative; width: 115.2px; height: 680px; overflow: hidden; border: 2px solid #d99324; background: #560913; }
+      #fixture canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .reward-bank-mouth { position: absolute; right: 6px; bottom: 4px; left: 6px; height: 16px; background: #100105; }
+    </style>
+    <script defer src="../js/constants.js"></script>
+    <script defer src="../js/marble-visual.js"></script>
+    <script defer src="../js/reward-marble-bank.js"></script>
+    <script defer src="reward-bank.test.js"></script>
+  </head>
+  <body>
+    <h1>中奖弹珠仓测试</h1>
+    <p id="summary">正在运行…</p>
+    <pre id="results"></pre>
+    <div id="fixture" aria-hidden="true">
+      <canvas></canvas>
+      <div class="reward-bank-mouth"></div>
+    </div>
+  </body>
+</html>

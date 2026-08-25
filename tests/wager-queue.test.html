@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>下注弹珠队列测试</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <style>
+      body { margin: 0; padding: 24px; color: #f8efff; background: #24093b; font: 15px/1.6 ui-monospace, monospace; }
+      h1 { color: #ffe268; }
+      .pass { color: #84f59a; }
+      .fail { color: #ff8a86; }
+      pre { padding: 16px; overflow: auto; border-radius: 12px; background: #12031f; }
+      #fixture { position: relative; width: 600px; max-width: 100%; height: 100px; overflow: hidden; border: 1px solid #754389; }
+      #fixture canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .stake-inlet { position: absolute; bottom: 0; left: 5%; width: 44px; height: 12px; background: #12020b; }
+    </style>
+    <script defer src="../js/constants.js"></script>
+    <script defer src="../js/marble-visual.js"></script>
+    <script defer src="../js/wager-marble-queue.js"></script>
+    <script defer src="wager-queue.test.js?v=2"></script>
+  </head>
+  <body>
+    <h1>下注弹珠队列测试</h1>
+    <p id="summary">正在运行…</p>
+    <pre id="results"></pre>
+    <div id="fixture" aria-hidden="true">
+      <canvas></canvas>
+      <div class="stake-inlet"></div>
+      <strong data-stake-count>0</strong>
+    </div>
+  </body>
+</html>

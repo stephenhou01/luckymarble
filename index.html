@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#6f2aa5">
+    <title>幸运弹珠</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/machine.css">
+    <link rel="stylesheet" href="css/game-assets.css">
+    <link rel="stylesheet" href="css/card-dispenser.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/skins.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="machine" id="machine" aria-label="幸运弹珠游戏机">
+        <div class="machine-art" aria-hidden="true"></div>
+        <div class="machine-hardware" aria-hidden="true">
+          <span class="machine-hardware-bulb machine-hardware-bulb--left game-icon game-icon--bulb"></span>
+          <span class="machine-hardware-bulb machine-hardware-bulb--right game-icon game-icon--bulb"></span>
+          <span class="machine-hardware-screw machine-hardware-screw--top-left game-icon game-icon--screw"></span>
+          <span class="machine-hardware-screw machine-hardware-screw--top-right game-icon game-icon--screw"></span>
+          <span class="machine-hardware-screw machine-hardware-screw--bottom-left game-icon game-icon--screw"></span>
+          <span class="machine-hardware-screw machine-hardware-screw--bottom-right game-icon game-icon--screw"></span>
+        </div>
+
+        <header class="scoreboard">
+          <div class="brand-block">
+            <span class="brand-kicker">MARBLE LUCK</span>
+            <h1>幸运弹珠</h1>
+          </div>
+          <div class="card-wallet" id="card-metrics" role="status" aria-live="polite">
+            <span class="game-icon game-icon--reward-card" aria-hidden="true"></span>
+            <strong id="card-count" data-card-count>0</strong>
+          </div>
+          <div class="wallet" aria-label="当前积分">
+            <span class="coin game-icon game-icon--coin" aria-hidden="true"></span>
+            <strong id="balance-value">100</strong>
+          </div>
+          <div class="credit-control">
+            <button class="credit-button" id="credit-button" type="button" aria-label="增加弹珠积分" aria-expanded="false" aria-controls="credit-menu">
+              <span aria-hidden="true">＋</span>
+            </button>
+            <div class="credit-menu" id="credit-menu" aria-label="选择上分数量" hidden>
+              <button type="button" data-credit-amount="100">加 <strong>100</strong></button>
+              <button type="button" data-credit-amount="500">加 <strong>500</strong></button>
+              <button type="button" data-credit-amount="1000">加 <strong>1000</strong></button>
+            </div>
+            <span class="credit-feedback" id="credit-feedback" aria-hidden="true"></span>
+          </div>
+          <div class="skin-control">
+            <button class="icon-button skin-button" id="skin-button" type="button" aria-label="切换皮肤，当前经典乐园" aria-expanded="false" aria-controls="skin-menu">
+              <span class="skin-palette-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <div class="skin-menu" id="skin-menu" aria-label="选择游戏皮肤" hidden>
+              <button type="button" data-skin-id="classic" aria-pressed="true">
+                <i class="skin-swatch skin-swatch--classic" aria-hidden="true"></i><span>经典乐园</span>
+              </button>
+              <button type="button" data-skin-id="ocean" aria-pressed="false">
+                <i class="skin-swatch skin-swatch--ocean" aria-hidden="true"></i><span>深海水晶</span>
+              </button>
+              <button type="button" data-skin-id="cosmic" aria-pressed="false">
+                <i class="skin-swatch skin-swatch--cosmic" aria-hidden="true"></i><span>星际霓虹</span>
+              </button>
+              <button type="button" data-skin-id="candy" aria-pressed="false">
+                <i class="skin-swatch skin-swatch--candy" aria-hidden="true"></i><span>糖果乐园</span>
+              </button>
+            </div>
+          </div>
+          <button class="icon-button" id="sound-button" type="button" aria-label="打开声音设置" aria-expanded="false" aria-controls="audio-panel">
+            <span class="button-icon game-icon game-icon--sound" aria-hidden="true"></span>
+          </button>
+          <button class="icon-button" id="reset-button" type="button" aria-label="重新开始">
+            <span class="button-icon game-icon game-icon--reset" aria-hidden="true"></span>
+          </button>
+          <button class="baby-mode-toggle" id="baby-mode-toggle" type="button" role="switch" aria-checked="false" aria-label="宝宝模式，当前关闭">
+            <span class="baby-mode-copy">宝宝</span>
+            <span class="baby-mode-track" aria-hidden="true"><i></i></span>
+          </button>
+        </header>
+        <div class="accessible-status" id="credit-live" role="status" aria-live="polite"></div>
+
+        <section class="audio-panel" id="audio-panel" aria-label="声音设置" hidden>
+          <div class="audio-panel-heading">
+            <strong>声音设置</strong>
+            <span>音乐与语音独立控制</span>
+          </div>
+          <div class="audio-control-row audio-master-row">
+            <button class="audio-toggle" id="music-master-toggle" type="button" role="switch" aria-checked="true">
+              <span class="audio-toggle-track" aria-hidden="true"><i></i></span>
+              <span>音乐总开关</span>
+            </button>
+            <span class="audio-master-hint">统一控制背景与中奖音乐</span>
+          </div>
+          <div class="audio-channel" id="background-audio-channel">
+            <div class="audio-control-row">
+              <button class="audio-toggle" id="background-music-toggle" type="button" role="switch" aria-checked="true">
+                <span class="audio-toggle-track" aria-hidden="true"><i></i></span>
+                <span>背景</span>
+              </button>
+              <input id="background-volume" type="range" min="0" max="100" step="5" value="20" aria-label="背景音乐音量">
+              <output id="background-volume-value" for="background-volume">20%</output>
+            </div>
+            <div class="audio-track-row">
+              <label for="background-track-select">曲目</label>
+              <select id="background-track-select" aria-label="选择背景音乐">
+                <option value="0">第一首</option>
+                <option value="1">第二首</option>
+                <option value="2">第三首</option>
+                <option value="3">第四首</option>
+              </select>
+              <button class="audio-preview" id="background-preview-button" type="button" aria-pressed="false">试听</button>
+            </div>
+          </div>
+          <div class="audio-channel" id="win-audio-channel">
+            <div class="audio-control-row">
+              <button class="audio-toggle" id="win-music-toggle" type="button" role="switch" aria-checked="true">
+                <span class="audio-toggle-track" aria-hidden="true"><i></i></span>
+                <span>中奖</span>
+              </button>
+              <input id="win-volume" type="range" min="0" max="100" step="5" value="80" aria-label="中奖音乐音量">
+              <output id="win-volume-value" for="win-volume">80%</output>
+            </div>
+            <div class="audio-track-row">
+              <label for="win-track-select">曲目</label>
+              <select id="win-track-select" aria-label="选择中奖音乐">
+                <option value="0">第一首</option>
+                <option value="1">第二首</option>
+                <option value="2">第三首</option>
+                <option value="3">第四首</option>
+              </select>
+              <button class="audio-preview" id="win-preview-button" type="button" aria-pressed="false">试听</button>
+            </div>
+          </div>
+          <div class="audio-control-row">
+            <button class="audio-toggle" id="voice-toggle" type="button" role="switch" aria-checked="true">
+              <span class="audio-toggle-track" aria-hidden="true"><i></i></span>
+              <span>语音</span>
+            </button>
+            <input id="voice-volume" type="range" min="0" max="100" step="5" value="95" aria-label="中奖语音音量">
+            <output id="voice-volume-value" for="voice-volume">95%</output>
+          </div>
+        </section>
+
+        <section class="status-row" aria-label="卡片出口与本局倍率">
+          <section class="card-dispenser" id="card-dispenser" aria-label="奖励卡片槽" aria-busy="false">
+            <span class="card-slot-ticket game-icon game-icon--ticket" aria-hidden="true"></span>
+            <div class="card-slot-mouth" id="card-slot-mouth" aria-hidden="true"><i></i></div>
+          </section>
+          <section class="multiplier-panel" aria-label="本局倍率">
+            <span class="multiplier-icon game-icon game-icon--target" aria-hidden="true"></span>
+            <span class="multiplier-ornament game-icon game-icon--bell" aria-hidden="true"></span>
+            <span class="multiplier-label">倍率</span>
+            <div class="multiplier-reel" id="multiplier-reel">
+              <span data-multiplier="2"><i></i>2</span>
+              <span data-multiplier="4"><i></i>4</span>
+              <span data-multiplier="6"><i></i>6</span>
+              <span data-multiplier="8"><i></i>8</span>
+              <span data-multiplier="10"><i></i>10</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="playfield-wrap" aria-label="弹珠碰撞区域">
+          <canvas id="playfield" aria-label="弹珠、碰撞柱与十二个落洞"></canvas>
+          <aside class="reward-bank" id="reward-bank" aria-label="中奖弹珠仓" aria-busy="false">
+            <canvas id="reward-bank-canvas" aria-hidden="true"></canvas>
+            <span class="reward-bank-title" aria-hidden="true">奖珠通道</span>
+            <div class="reward-bank-meter" id="reward-bank-meter" role="status" aria-live="polite">
+              <span id="reward-bank-label">仓内</span>
+              <strong id="reward-bank-count">100</strong>
+              <small id="reward-bank-progress"></small>
+            </div>
+            <div class="reward-bank-mouth" id="reward-bank-mouth" aria-hidden="true"><i></i></div>
+          </aside>
+          <div class="card-showcase" id="card-showcase" aria-hidden="true" hidden></div>
+          <div class="phase-banner" id="phase-banner" role="status" aria-live="polite">调整下注，点击开始</div>
+          <div class="multiplier-announcement" id="multiplier-announcement" role="status" aria-live="assertive" hidden>
+            <span>当前倍率 <strong id="announcement-multiplier">×2</strong></span>
+            <small id="announcement-payout">命中可得 10 颗</small>
+          </div>
+          <div class="win-celebration" id="win-celebration" aria-hidden="true" hidden>
+            <span class="win-celebration-flash" aria-hidden="true"></span>
+            <span class="win-confetti win-confetti--left game-icon game-icon--confetti" aria-hidden="true"></span>
+            <span class="win-confetti win-confetti--right game-icon game-icon--sparkles" aria-hidden="true"></span>
+            <div class="win-celebration-stage">
+              <img src="assets/mascot-win-v2.webp" alt="庆祝中奖的松鼠">
+              <div class="win-celebration-copy">
+                <span id="win-celebration-title">恭喜中奖</span>
+                <strong id="win-celebration-payout">+0 颗弹珠</strong>
+                <small id="win-celebration-cards" hidden>+0 张卡片</small>
+                <em id="win-celebration-multiplier">×2 倍好运</em>
+              </div>
+            </div>
+          </div>
+          <div class="accessible-status" id="win-celebration-live" role="status" aria-live="assertive"></div>
+          <div class="result-card" id="result-card" aria-live="assertive" hidden>
+            <div class="result-visual">
+              <img src="assets/mascot-win-v2.webp" alt="庆祝中奖的松鼠">
+              <span class="result-status-icon game-icon" aria-hidden="true"></span>
+            </div>
+            <div>
+              <strong id="result-title">命中！</strong>
+              <span id="result-detail">获得 0 分</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="bank-transfer-chute" aria-hidden="true"><i></i></div>
+
+        <section class="control-deck" aria-label="游戏控制区">
+          <div class="marble-tray" id="marble-tray" aria-label="下注弹珠投入轨道" aria-busy="false">
+            <canvas class="wager-physics-canvas" id="wager-physics-canvas" aria-hidden="true"></canvas>
+            <div class="tray-label" aria-hidden="true">重力投珠槽</div>
+            <div class="stake-inlet" id="stake-inlet" aria-hidden="true"><i></i></div>
+            <div class="bank-outlet" id="bank-outlet" aria-hidden="true"><i></i></div>
+            <div class="stake-counter" id="stake-counter">
+              <span id="stake-status-label">待投入</span>
+              <strong id="stake-marble-count">5</strong>
+              <small id="stake-progress"></small>
+            </div>
+          </div>
+          <div class="control-row">
+            <button class="start-button" id="start-button" type="button">开始</button>
+
+            <div class="wager-panel">
+              <div class="wager-control" aria-label="下注分数">
+                <button id="wager-minus" type="button" aria-label="减少一分">−</button>
+                <div><span>下注</span><strong id="wager-value">5</strong></div>
+                <button id="wager-plus" type="button" aria-label="增加一分">＋</button>
+              </div>
+              <div class="quick-wagers" aria-label="快捷下注总额">
+                <button type="button" data-wager-preset="35" aria-label="下注设为35分">35</button>
+                <button type="button" data-wager-preset="10" aria-label="下注设为10分">10</button>
+                <button type="button" data-wager-preset="99" aria-label="下注设为99分">99</button>
+                <div class="wager-limit-control">
+                  <button class="wager-limit-button" id="wager-limit-button" type="button" aria-label="设置投注上限，当前100分" aria-expanded="false" aria-controls="wager-limit-menu">
+                    <span>上限</span><strong id="wager-limit-value">100</strong>
+                  </button>
+                  <div class="wager-limit-menu" id="wager-limit-menu" aria-label="选择投注上限" hidden>
+                    <button type="button" data-wager-limit="100">100</button>
+                    <button type="button" data-wager-limit="200">200</button>
+                    <button type="button" data-wager-limit="300">300</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="launcher-control">
+              <div class="power-meter" aria-label="发射力度">
+                <div class="power-fill" id="power-fill"></div>
+                <span id="power-value">8%</span>
+              </div>
+              <button class="launch-button" id="launch-button" type="button" disabled>
+                <span class="launcher-ornament game-icon game-icon--plunger" aria-hidden="true"></span>
+                <span class="plunger-knob" aria-hidden="true"></span>
+                <span class="launch-copy">按住蓄力</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="game-over" id="game-over" hidden>
+          <div class="game-over-card">
+            <span class="game-over-icon game-icon game-icon--horseshoe" aria-hidden="true"></span>
+            <span>积分不足</span>
+            <strong>再来一局？</strong>
+            <button id="restart-button" type="button">恢复 100 分</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="js/constants.js"></script>
+    <script defer src="js/rules.js"></script>
+    <script defer src="js/marble-visual.js"></script>
+    <script defer src="js/physics.js"></script>
+    <script defer src="js/rendering.js"></script>
+    <script defer src="js/audio.js"></script>
+    <script defer src="js/reward-marble-bank.js"></script>
+    <script defer src="js/wager-marble-queue.js"></script>
+    <script defer src="js/card-dispenser.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

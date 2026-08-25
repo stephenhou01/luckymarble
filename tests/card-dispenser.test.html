@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>卡片槽测试</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/game-assets.css">
+    <link rel="stylesheet" href="../css/card-dispenser.css">
+    <style>
+      body { margin: 0; padding: 24px; color: #f8efff; background: #24093b; font: 15px/1.6 ui-monospace, monospace; }
+      h1 { color: #ffe268; }
+      .pass { color: #84f59a; }
+      .fail { color: #ff8a86; }
+      pre { padding: 16px; overflow: auto; border-radius: 12px; background: #12031f; }
+      #stage { position: relative; width: 560px; height: 620px; overflow: hidden; border: 2px solid #d99324; background: #fff3cf; --reward-lane-width: 16.5%; }
+    </style>
+    <script defer src="../js/constants.js"></script>
+    <script defer src="../js/card-dispenser.js"></script>
+    <script defer src="card-dispenser.test.js"></script>
+  </head>
+  <body>
+    <h1>卡片奖励槽测试</h1>
+    <p id="summary">正在运行…</p>
+    <pre id="results"></pre>
+    <div id="stage">
+      <div class="card-wallet" id="fixture-metrics">
+        <strong data-card-count>0</strong>
+        <span>卡片分<strong data-card-points>0</strong></span>
+        <span>总卡<strong data-card-total>0</strong></span>
+        <small data-card-status></small>
+        <i data-card-progress></i>
+      </div>
+      <section class="card-dispenser" id="fixture" aria-busy="false">
+        <div class="card-slot-mouth"><i></i></div>
+      </section>
+      <div class="card-showcase" id="fixture-showcase" hidden></div>
+    </div>
+  </body>
+</html>
